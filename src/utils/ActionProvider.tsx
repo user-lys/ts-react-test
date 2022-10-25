@@ -20,7 +20,10 @@ const isDevEnv = process.env.NODE_ENV === 'production'
 if (isDevEnv) Object.freeze(NOOP)
 
 interface Props {
-  actions: any,
+  actions: {
+    type: string
+    component: Function
+  }[],
   removeDelay?: number,
   initialVisible?: boolean,
   Loading?: any,

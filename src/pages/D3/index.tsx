@@ -9,7 +9,7 @@ export default function D3 ({}: Props): ReactElement {
   const data = [{ x: 60, y: 60 }, { x: 120, y: 60 }, { x: 220, y: 60 }, { x: 320, y: 60 }]
 
   const init = () => {
-    const warp = document.getElementById('warp') as HTMLElement
+    // const warp = document.getElementById('warp') as HTMLElement
 
     // demo1
     // warp.append(span()) // hello world
@@ -22,6 +22,7 @@ export default function D3 ({}: Props): ReactElement {
   }
   useEffect(() => {
     init()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // demo1
