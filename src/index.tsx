@@ -14,15 +14,16 @@ import { store } from './store'
 import { actions } from '@/store/actions'
 
 ReactDOM.render(
-  // <React.StrictMode></React.StrictMode>  启动react的严格模式检查
-  <Provider store={store}>
-    <BrowserRouter>
-      <ActionProvider actions={actions}>
-          <App />
-      </ActionProvider>
-    </BrowserRouter>
-  </Provider>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Provider store={store}>
+            <BrowserRouter>
+                <ActionProvider actions={actions}>
+                    <App />
+                </ActionProvider>
+            </BrowserRouter>
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
 )
 // reportWebVitals(console.log) // 性能监控 https://www.jianshu.com/p/9d75592edb9e
 serviceWorker.unregister()

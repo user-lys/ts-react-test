@@ -15,6 +15,7 @@ const App: React.FC = function () {
   const handleClick = React.useCallback(() => {
     openModal()
   }, [openModal])
+
   return (
     <Routes>
       <Route path="/" element={<Drag />}></Route>
